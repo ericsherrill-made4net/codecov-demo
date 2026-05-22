@@ -52,7 +52,6 @@ PyYAML==5.4.1
 requests==2.25.1
 resolvelib==0.5.4
 rhc-playbook-verifier==1.0.0
-rhc-worker-playbook @ file:///builddir/build/BUILD/rhc-worker-playbook-0.1.14/wheels/rhc_worker_playbook-0.1.14-py3-none-any.whl
 rpm==4.16.1.3
 selinux==3.6
 sepolicy==3.6
