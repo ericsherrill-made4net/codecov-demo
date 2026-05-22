@@ -24,7 +24,7 @@ Jinja2==3.1.6
 jsonpatch==1.21
 jsonpointer==2.0
 jsonschema==3.2.0
-libcomps==0.1.18
+libcomps>=0.1.20
 MarkupSafe==3.0.3
 netifaces==0.10.6
 oauthlib==3.1.1
