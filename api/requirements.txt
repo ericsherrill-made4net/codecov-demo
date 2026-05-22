@@ -49,11 +49,7 @@ pytz==2021.1
 PyYAML>=6.0
 requests==2.25.1
 resolvelib==0.5.4
-selinux==3.6
-sepolicy==3.6
-setools==4.4.4
 six==1.15.0
-subscription-manager==1.29.50
 systemd-python==234
 toml==0.10.2
 tomli==2.4.1
