@@ -12,9 +12,9 @@ jobs:
       with:
         python-version: '3.10'
     - name: Install system dependencies
-      run: sudo apt-get update && sudo apt-get install -y libgpgme-dev libgpg-error-dev libgpg-error0 libgpgme11 libgpgme11t64 libassuan-dev libassuan0 gpgrt-tools gpgme-json gpg gnupg gpgconf python3-gpg build-essential
+      run: sudo apt-get update && sudo apt-get install -y libgpgme-dev libgpg-error-dev libgpg-error0 libgpgme11 libgpgme11t64 libassuan-dev libassuan0 gpgrt-tools gpgme-json gpg gnupg gpgconf python3-gpg build-essential pkg-config
     - name: Install requirements
-      run:  export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH" ; pip install -r api/requirements.txt
+      run: export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH" ; pip install -r api/requirements.txt
     - name: Run tests and collect coverage
       run: pytest --cov=api.calculator --cov-report=xml
     - name: Upload coverage reports to Codecov with GitHub Action
