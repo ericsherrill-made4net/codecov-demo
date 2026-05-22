@@ -50,7 +50,6 @@ PyYAML>=6.0
 requests==2.25.1
 resolvelib==0.5.4
 six==1.15.0
-systemd-python==234
 toml==0.10.2
 tomli==2.4.1
 typing_extensions==4.15.0
