@@ -46,7 +46,7 @@ pytest==8.4.2
 pytest-cov==7.1.0
 python-dateutil==2.9.0.post0
 pytz==2021.1
-PyYAML==5.4.1
+PyYAML>=6.0
 requests==2.25.1
 resolvelib==0.5.4
 rhc-playbook-verifier==1.0.0
