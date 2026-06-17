@@ -7,7 +7,7 @@ chardet==4.0.0
 click==8.1.8
 configobj==5.0.9
 coverage==7.10.7
-cryptography==46.0.7
+cryptography==48.0.1
 dbus-python==1.2.18
 decorator==4.4.2
 distro==1.5.0
