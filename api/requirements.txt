@@ -2,7 +2,7 @@ ansible-core==2.16.14rc1
 attrs==20.3.0
 Babel==2.9.1
 blinker==1.9.0
-cffi==1.14.5
+cffi>=2.0.0
 chardet==4.0.0
 click==8.1.8
 configobj==5.0.9
