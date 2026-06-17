@@ -1,6 +1,7 @@
 const axios = require('axios')
 const express = require("express");
 const path = require("path");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 
@@ -9,6 +10,11 @@ const backendPort = '8080';
 
 app.use(express.json());
 app.use("/static", express.static(path.resolve(__dirname, "static")));
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100
+});
 
 app.post("/api/:operation", (req, res) => {
   axios.post(
@@ -21,7 +27,7 @@ app.post("/api/:operation", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
+app.get("/", limiter, (req, res) => {
   res.sendFile(path.resolve("index.html"));
 });
 app.listen(process.env.PORT || 3000, () => console.log("Server running..."));
