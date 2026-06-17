@@ -16,9 +16,17 @@ const limiter = rateLimit({
   max: 100
 });
 
+const allowedOperations = new Set(["login", "register", "reset-password"]);
+
 app.post("/api/:operation", (req, res) => {
+  const operation = req.params.operation;
+
+  if (!allowedOperations.has(operation)) {
+    return res.status(400).json({ error: "Invalid operation" });
+  }
+
   axios.post(
-    backendHost + ':' +  backendPort + '/api/' + req.params['operation'],
+    backendHost + ':' + backendPort + '/api/' + encodeURIComponent(operation),
     req.body
   ).then(response => {
     res.json(response.data);
